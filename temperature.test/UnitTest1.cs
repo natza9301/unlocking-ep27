@@ -59,5 +59,28 @@ namespace temperature.test {
 
             x.Should ().Be (expectedResult);
         }
+
+        [Theory (DisplayName = "เปลี่ยนค่า Fahrenheit ให้เป็น celsiusได้สำเร็จ No.1")]
+        [InlineData (5,-15.0)]
+        [InlineData (14,-10.0)]
+        [InlineData (41,5.00)]
+        public void ConvertFahrenheitToCelsiusHomework (double input, double expectedResult) {
+            var cal = new TempCalculator ();
+            var x = cal.ConvertFahrenheitToCelsiusHomework (input);
+
+            x.Should ().Be (expectedResult);
+        }
+        [Theory (DisplayName = "เปลี่ยนค่า องศา celsius ให้เป็น Fahrenheit ได้สำเร็จ NO.2")]
+        [InlineData (32, 89.60)]
+        [InlineData (50, 122.00)]
+        [InlineData (14, 57.2000)]
+        [InlineData (5.00, 41)]
+        public void ConvertCelsiusToFahrenheitSuccessHomework (double input, double expectedResult) {
+            var cal = new TempCalculator ();
+            var x = cal.ConvertCelsiusToFahrenheitSuccessHomework (input);
+
+            x.Should ().Be (expectedResult);
+        }
+
     }
 }

@@ -73,6 +73,14 @@ namespace temperature {
             double Kelvin = celsius + 273.15 ;
             return Kelvin ;
         }
+        public double ConvertFahrenheitToCelsiusHomework (double fahrenheit) {
+            double Celsius = (fahrenheit - 32 ) * 5.0/9.0;
+            return Celsius; 
+        }
+        public double ConvertCelsiusToFahrenheitSuccessHomework (double celsius) {
+            double Fahrenheit = (1.8 * celsius ) +32;
+            return Fahrenheit;
+        }
 
     }
 }
